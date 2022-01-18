@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.root-icon {
+	border: 3px solid #aaaaaa;
+	// color: orangered;
+}
+
+.nav-btn:hover {
+	background-color: #5a6268 !important;
+}
