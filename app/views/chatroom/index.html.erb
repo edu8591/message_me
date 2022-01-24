@@ -8,16 +8,11 @@
 
     <div class="col-8  shadow rounded-lg">
       <div class="chatbox pt-1 d-flex flex-column">
+
         <div class="content mb-auto">
-          <div class="event">
-            <p class="mb-1"><a href="#"> Elliot Fu</a> added <a href="#">Jenny Hess</a> as a friend</p>
-          </div>
-          <div class="event">
-            <p class="mb-1"><a href="#"> Elliot Fu</a> added <a href="#">Jenny Hess</a> as a friend</p>
-          </div>
-          <div class="event">
-            <p class="mb-1"><a href="#"> Elliot Fu</a> added <a href="#">Jenny Hess</a> as a friend</p>
-          </div>
+          <% @messages.each do |message| %>
+            <%= render 'shared/message', body: message.body, user: message.user.username %>
+          <% end %>
         </div>
 
 
