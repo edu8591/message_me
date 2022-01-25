@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
-	def new; end
+	before_action :logged_in_redirect, only: %i[new create]
+	def new
+		logged_in_redirect
+	end
 
 	def create
 		user = User.find_by(username: params[:session][:username].downcase)
@@ -24,5 +27,12 @@ class SessionsController < ApplicationController
 
 	def sessions_params
 		params.require(:session).permit(:username, :password)
+	end
+
+	def logged_in_redirect
+		if logged_in?
+			flash[:error] = 'You are already logged in'
+			redirect_to root_path
+		end
 	end
 end
