@@ -15,12 +15,16 @@
           <% end %>
         </div>
 
+        <%= form_for(@message, url: message_path, html:{class:"border-top pt-2 d-flex"}) do |f|%>
+          <%= f.text_field :body, class:"form-control", placeholder: "Enter a message..." %>
+          <%= f.button '<i class="fas fa-paper-plane"></i>'.html_safe ,class:"btn btn-warning" %>
+        <% end %>
 
-        <form action="#" class="border-top pt-2 d-flex">
+        <%# <form action="#" class="border-top pt-2 d-flex">
 
           <input type="text" class="form-control" placeholder="Enter a message...">
           <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"></i></button>
-        </form>
+        </form> %>
 
 
       </div>

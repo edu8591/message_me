@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 	delete 'logout', to: 'sessions#destroy'
 
 	#manage the message
-	post 'message', to: 'message#create'
+	post 'message', to: 'messages#create'
 end
