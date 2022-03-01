@@ -33,3 +33,4 @@ $(document).on("turbolinks:load", function () {
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
+// testline
