@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 	#manage the message
 	post 'message', to: 'messages#create'
 
-mount ActionCable.server, at: '/cable'
+	mount ActionCable.server, at: '/cable'
 end
