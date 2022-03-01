@@ -15,9 +15,12 @@
           <% end %>
         </div>
 
-        <%= form_for(@message, url: message_path, remote: true, html:{class:"border-top pt-2 d-flex"}) do |f|%>
+        <%= form_for(@message, url: message_path, remote: true, html:{class:"border-top pt-2 d-flex", role: 'form'}) do |f|%>
+
           <%= f.text_field :body, class:"form-control", placeholder: "Enter a message..." %>
+
           <%= f.button '<i class="fas fa-paper-plane"></i>'.html_safe ,class:"btn btn-warning" %>
+
         <% end %>
 
 

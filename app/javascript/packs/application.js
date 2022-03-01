@@ -19,11 +19,11 @@ export const scrollBottom = function () {
 	}
 };
 
-export const clearInputText = () => {
-	document.querySelector(".btn-warning").addEventListener("click", function () {
-		document.getElementById("message_body").value = "";
-	});
-};
+// export const clearInputText = () => {
+// 	document.querySelector(".btn-warning").addEventListener("click", function () {
+// 		document.getElementById("message_body").value = "";
+// 	});
+// };
 
 $(document).on("turbolinks:load", function () {
 	scrollBottom();
