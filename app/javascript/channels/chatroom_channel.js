@@ -16,7 +16,7 @@ consumer.subscriptions.create("ChatroomChannel", {
 		const htmlElement = $("#messages-container");
 		htmlElement.append(data.message);
 		scrollBottom();
-		clearInputText;
+		clearInputText();
 		// if writing the previous line with document.getElementById() will return as a string instead of HTML
 	},
 });
